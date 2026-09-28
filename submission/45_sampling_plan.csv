@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,35,Bỏ sót xe hoặc người đi bộ tầm xa khi chạy tốc độ cao trên đường thẳng,Ưu tiên số frame lớn để đo baseline vận hành chính của xe (hầu hết thời gian chạy tiến)
+front,hard,25,Lóa sáng đèn pha ban đêm hoặc ngược sáng mặt trời; vật cản cắt ngang bất ngờ,Rủi ro va chạm trực diện nguy hiểm nhất; cần kiểm tra kỹ ca chói sáng và méo viền fisheye
+rear,normal,30,Nhận diện sai hoặc thiếu xe chạy bám đuôi ở cự ly an toàn chuẩn,Đo baseline cho chế độ giám sát phía sau và hỗ trợ giữ khoảng cách
+rear,hard,20,Bụi bẩn hoặc giọt nước bám ống kính sau làm mờ; vật cản thấp hoặc trẻ em lọt điểm mù khi lùi,Rủi ro va chạm khi lùi và đỗ xe trong không gian hẹp; cần kiểm tra ca điểm mù sát cản sau
+left,normal,25,Xác định sai vị trí hoặc kích thước phương tiện chạy song song ở làn kế bên,Đo baseline vùng nhìn ngang xe ở điều kiện chuẩn
+left,hard,20,Xe hai bánh vượt sát sườn bị méo viền fisheye nặng; vật thể rơi vào vùng seam cắt giữa cam trước và trái,Điểm mù sườn xe và hiện tượng méo quang học rìa kính; kiểm tra ca cross-camera
+right,normal,25,Lệch box hoặc sót xe chạy ở làn bên phải khi xe đi thẳng,Cân bằng kiểm thử đối xứng với camera trái
+right,hard,20,Người đi bộ hoặc xe đạp sát lề đường bị cắt khung (truncated); vật lọt vùng seam trước/phải khi rẽ,Rủi ro va quẹt khi rẽ phải và tấp lề; kiểm định ca bị che và cắt khung mép xe

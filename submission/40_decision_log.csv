@@ -1,1 +1,5 @@
 id,date,question,decision,rationale,status
+DEC-01,2026-09-28,Có nên tách box riêng cho người ngồi trên xe hai bánh ở C0 không?,Gộp chung xe và người thành một box Bike duy nhất,Tuân thủ luật R03 và khắc phục lỗi SPURIOUS L2 trong round calib,resolved
+DEC-02,2026-09-28,Xử lý thuộc tính truncated của ThreeWheeler ở mép trái (062370 L6 và 069450 L1) ra sao?,Bỏ tick truncated và chỉ tick occluded nếu bị thân xe che,Theo luật R05 cả 4 góc box nằm trọn trong vòng kính tròn không bị viền cắt hình học,resolved
+DEC-03,2026-09-28,Xử lý đối tượng mờ và bị che khuất nặng ở hậu cảnh frame 117120 ra sao?,Gán polygon ignore_region với reason=unreadable thay vì cố vẽ box chữ nhật,Đối tượng bị che >85% và nhòe không thể nhận diện class; đã tạo ticket kèm ảnh minh chứng frame3-1.png và frame3-2.png,escalated
+DEC-04,2026-09-28,Ca L3+M8 ở frame 117120 cả annotator và model đều thấy Car nhưng reference không có?,Giữ lại box Car và báo cáo teaching reference bỏ sót đối tượng,L3 và M8 khớp nhau rõ ràng trên ảnh; xác định là lỗi E0_reference_defect cần sửa gold set,escalated

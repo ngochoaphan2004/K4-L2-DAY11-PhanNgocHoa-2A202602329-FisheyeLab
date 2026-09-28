@@ -1,1 +1,37 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+calib,C0,adasind_019560.jpg,L2,na,SPURIOUS,E1_annotator_error,P1,annotator,R03,compare.md báo L2 SPURIOUS; L2 là box Pedestrian (h=94.2) vẽ riêng người lái xe,rework,v1.0.0,Tách rider thành Pedestrian L2 thay vì gộp vào Bike theo luật R03; ref R2 gộp chung xe và người.
+calib,C0,adasind_019560.jpg,L8,na,SPURIOUS,E1_annotator_error,P1,annotator,R01,compare.md báo L8 SPURIOUS; L8 là box Bike nhỏ (h=52.8) vẽ lọt bên trong L3,rework,v1.0.0,Vẽ thừa/trùng lặp box Bike L8 đè trong box Bike L3 (tương ứng ref R1); cần xoá box thừa.
+calib,C0,adasind_019560.jpg,L1,na,BOX_GEOMETRY,E1_annotator_error,P1,annotator,R03,L1 cao 131px (ytl=789.75) trong khi ref R2 cao 174px (ytl=736.00),rework,v1.0.0,Box L1 bị hụt phần đầu và thân trên của rider do tách người thành L2; cần mở rộng đỉnh box trùm cả người theo R03.
+r2_qa,B2-dense,adasind_062370.jpg,L6,L_only,MISSING,,P1,qa,R01,qa_overlay.html: xe 3 bánh ở giữa khung hình (cạnh L6) H > 40px không được vẽ,rework,v1.0.0,Một xe 3 bánh nằm ở giữa khung hình có kích thước H>40px không được vẽ
+r2_qa,B2-dense,adasind_069450.jpg,L1,L_only,ATTRIBUTE,,P2,qa,R05,qa_overlay.html: L1 ThreeWheeler bị che bởi ego body,rework,v1.0.0,Một xe 3 bánh ở phía bên trái khung hình bị che một phần bởi ego body nên cần để là occluded
+r2_qa,B2-dense,adasind_117120.jpg,L4,L_only,MISSING,,P1,qa,R01,qa_overlay.html: xe hơi phía sau xe lớn (gần L4) H > 40px không được vẽ,rework,v1.0.0,Một vài chiếc xe hơi phía sau các xe lớn có kích thước lớn hơn 40px nên đang bị đánh thiếu
+r1_craft,B2-dense,adasind_062370.jpg,R7,na,MISSING,E1_annotator_error,P1,annotator,,,rework,v1.0.0,
+r1_craft,B2-dense,adasind_062370.jpg,R8,na,MISSING,E1_annotator_error,P1,annotator,,,rework,v1.0.0,
+r1_craft,B2-dense,adasind_117120.jpg,L3,na,SPURIOUS,E1_annotator_error,P1,annotator,,,rework,v1.0.0,
+r1_craft,B2-dense,adasind_117120.jpg,L7,na,SPURIOUS,E3_data_defect,P1,annotator,,,rework,v1.0.0,
+r1_craft,B2-dense,adasind_117120.jpg,L9,na,SPURIOUS,E3_data_defect,P1,annotator,,,rework,v1.0.0,
+r1_craft,B2-dense,adasind_117120.jpg,L10,na,SPURIOUS,E3_data_defect,P1,annotator,,,rework,v1.0.0,
+r3_diag,B2-dense,adasind_062370.jpg,L5+R1,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,,keep_with_reason,v1.0.0,Model lệch miền dữ liệu do ảnh fisheye méo viền hoặc góc khuất
+r3_diag,B2-dense,adasind_062370.jpg,L6+R6,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,,keep_with_reason,v1.0.0,Model lệch miền dữ liệu do ảnh fisheye méo viền hoặc góc khuất
+r3_diag,B2-dense,adasind_062370.jpg,L7+R5,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,,keep_with_reason,v1.0.0,Model lệch miền dữ liệu do ảnh fisheye méo viền hoặc góc khuất
+r3_diag,B2-dense,adasind_062370.jpg,R7,R_only,MISSING,E0_reference_defect,P1,qa,R01,,escalate,v1.0.0,Reference vẽ trùng lặp hai box ThreeWheeler lọt nhau
+r3_diag,B2-dense,adasind_062370.jpg,R8,R_only,MISSING,E1_annotator_error,P1,annotator,R01,,rework,v1.0.0,Người gán nhãn bỏ sót phương tiện ở hậu cảnh
+r3_diag,B2-dense,adasind_062370.jpg,M3,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,,keep_with_reason,v1.0.0,Model dự đoán nhầm nền/hoa văn trên đường thành box xe
+r3_diag,B2-dense,adasind_062370.jpg,M4,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,,keep_with_reason,v1.0.0,Model dự đoán nhầm nền/hoa văn trên đường thành box xe
+r3_diag,B2-dense,adasind_062370.jpg,M5,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,,keep_with_reason,v1.0.0,Model dự đoán nhầm nền/hoa văn trên đường thành box xe
+r3_diag,B2-dense,adasind_062370.jpg,M8,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,,keep_with_reason,v1.0.0,Model dự đoán nhầm nền/hoa văn trên đường thành box xe
+r3_diag,B2-dense,adasind_062370.jpg,M10,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,,keep_with_reason,v1.0.0,Model dự đoán nhầm nền/hoa văn trên đường thành box xe
+r3_diag,B2-dense,adasind_069450.jpg,L2+R2,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,,keep_with_reason,v1.0.0,Model lệch miền dữ liệu do ảnh fisheye méo viền hoặc góc khuất
+r3_diag,B2-dense,adasind_069450.jpg,L1+R1,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,,keep_with_reason,v1.0.0,Model lệch miền dữ liệu do ảnh fisheye méo viền hoặc góc khuất
+r3_diag,B2-dense,adasind_069450.jpg,M5,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,,keep_with_reason,v1.0.0,Model dự đoán nhầm nền/hoa văn trên đường thành box xe
+r3_diag,B2-dense,adasind_069450.jpg,M7,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,,keep_with_reason,v1.0.0,Model dự đoán nhầm nền/hoa văn trên đường thành box xe
+r3_diag,B2-dense,adasind_117120.jpg,L1+R2,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,,keep_with_reason,v1.0.0,Model lệch miền dữ liệu do ảnh fisheye méo viền hoặc góc khuất
+r3_diag,B2-dense,adasind_117120.jpg,L8+R4,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,,keep_with_reason,v1.0.0,Model lệch miền dữ liệu do ảnh fisheye méo viền hoặc góc khuất
+r3_diag,B2-dense,adasind_117120.jpg,L3+M8,LM_noR,SPURIOUS,E0_reference_defect,P1,qa,R01,,escalate,v1.0.0,Cả người và model đều thấy xe con nhưng teaching reference bỏ sót
+r3_diag,B2-dense,adasind_117120.jpg,L7,L_only,SPURIOUS,E1_annotator_error,P2,annotator,R01,,rework,v1.0.0,Người vẽ nhầm người đi bộ bị che khuất quá mức
+r3_diag,B2-dense,adasind_117120.jpg,L9,L_only,SPURIOUS,E2_guideline_gap,P2,guideline,R04,,escalate,v1.0.0,Quy tắc phân loại phương tiện đặc biệt ở xa chưa đủ rõ ràng
+r3_diag,B2-dense,adasind_117120.jpg,L10,L_only,SPURIOUS,E5_unresolved,P2,data_ops,R06,,escalate,v1.0.0,Đối tượng bị che khuất nặng ở hậu cảnh cần ảnh độ phân giải cao hơn
+r3_diag,B2-dense,adasind_117120.jpg,M1,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,,keep_with_reason,v1.0.0,Model dự đoán nhầm nền/hoa văn trên đường thành box xe
+r3_diag,B2-dense,adasind_117120.jpg,M6,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,,keep_with_reason,v1.0.0,Model dự đoán nhầm nền/hoa văn trên đường thành box xe
+r3_diag,B2-dense,adasind_117120.jpg,M7,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,,keep_with_reason,v1.0.0,Model dự đoán nhầm nền/hoa văn trên đường thành box xe
+r3_diag,B2-dense,adasind_117120.jpg,M10,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,,keep_with_reason,v1.0.0,Model dự đoán nhầm nền/hoa văn trên đường thành box xe

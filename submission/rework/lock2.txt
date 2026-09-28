@@ -1,0 +1,19 @@
+round: rework
+slice: B2-dense
+sha256: 3ce3ff63883af4165aaa28d582e1de08e133aa5ae83cec52fff47963b46540c5
+code: 3CE3-FF63
+locked_at: 2026-09-28T18:18:38+07:00
+shapes: box=19, polygon=9
+prefill_kept: 3
+prefill_edited: 1
+new: 15
+history:
+  round: rework
+  slice: B2-dense
+  sha256: 2c6aed23109483f3176812fea368d0beada44af5cc62da380ea11c391fe7a07d
+  code: 2C6A-ED23
+  locked_at: 2026-09-28T18:14:45+07:00
+  shapes: box=24, polygon=9
+  prefill_kept: 3
+  prefill_edited: 1
+  new: 20
